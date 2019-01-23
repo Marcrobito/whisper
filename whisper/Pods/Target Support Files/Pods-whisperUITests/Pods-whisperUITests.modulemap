@@ -1,0 +1,6 @@
+framework module Pods_whisperUITests {
+  umbrella header "Pods-whisperUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
