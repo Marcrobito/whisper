@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+struct NetworkManager {
+    static let environment : NetworkEnvironment = .staging
+    
+    let router = Router<WhisperApi>()
+    
+}
