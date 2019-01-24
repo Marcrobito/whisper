@@ -7,3 +7,17 @@
 //
 
 import Foundation
+class MainPresenter:MainViewToPresenterProtocol{
+    var view: MainPresenterToViewProtocol?
+    
+    var interector: MainPresenterToInteractorProtocol?
+    
+    var router: MainPresenterToRouterProtocol?
+    
+    
+}
+
+
+extension MainPresenter:MainInteractorToPresenterProtocol{
+    
+}

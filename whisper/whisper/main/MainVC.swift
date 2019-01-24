@@ -6,4 +6,8 @@
 //  Copyright © 2019 Marco Antonio Martínez Gutiérrez. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class MainVC: UIViewController{
+    var presenter: MainViewToPresenterProtocol?
+}
