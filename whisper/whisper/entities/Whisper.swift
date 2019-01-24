@@ -8,10 +8,10 @@
 
 struct Popular: Codable{
     
-    let ad_units:[Any]
-    let cards:[Any]
+    let ad_units:[String]?
+    let cards:[String]?
     let engine:String
-    let popular:[Any]
+    let popular:[Whisper]
     let scroll_id:String
     
     private enum CodingKeys: String, CodingKey {
@@ -32,3 +32,21 @@ struct Popular: Codable{
  "popular": [],
  "scroll_id":
  */
+struct Whisper: Codable{
+    let geo_title:String
+    let in_reply_to:String?
+    let me2:Int
+    let nickname:String
+    let places:[String]?
+    let popularity:Double
+    let puid:String
+    let replies:Int
+    let shouts:Int
+    let sort:Int
+    let text:String
+    //let topics
+    let ts:Int
+    let url:String
+    let wid:String
+}
+

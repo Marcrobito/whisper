@@ -17,8 +17,11 @@ struct NetworkManager {
         router.request(.popular(limit: limit)) { data, response, error in
             let jsonDecoder = JSONDecoder()
             do{
+                print(data)
+                 print(response)
                 let jsonData = try JSONSerialization.data(withJSONObject: data!)
                 let responseData = try jsonDecoder.decode( Popular.self, from: jsonData)
+                print(responseData)
                 
                 completion(responseData,  error as! String?)
                 

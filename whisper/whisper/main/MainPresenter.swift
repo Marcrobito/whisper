@@ -8,16 +8,24 @@
 
 import Foundation
 class MainPresenter:MainViewToPresenterProtocol{
+    
+    
     var view: MainPresenterToViewProtocol?
     
     var interector: MainPresenterToInteractorProtocol?
     
     var router: MainPresenterToRouterProtocol?
     
+    func requestPopular() {
+        interector?.fetchPopular()
+    }
+    
     
 }
 
 
 extension MainPresenter:MainInteractorToPresenterProtocol{
-    
+    func popularFetched(whispers: [Whisper]) {
+        view?.updateView(whispers: whispers)
+    }
 }

@@ -26,6 +26,7 @@
 		963131B421F8EF93006AC57F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963131B321F8EF93006AC57F /* NetworkManager.swift */; };
 		963131B821F8EFDE006AC57F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963131B721F8EFDE006AC57F /* Router.swift */; };
 		963131BA21F8F046006AC57F /* Whisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963131B921F8F046006AC57F /* Whisper.swift */; };
+		9685A1FC21FA4B40003A58E7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685A1FB21FA4B40003A58E7 /* Extensions.swift */; };
 		BC3A0A75476B79CE64EE3EA5 /* Pods_whisper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96601EED575C6F9B56B1689B /* Pods_whisper.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		963131B721F8EFDE006AC57F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		963131B921F8F046006AC57F /* Whisper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whisper.swift; sourceTree = "<group>"; };
 		96601EED575C6F9B56B1689B /* Pods_whisper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whisper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9685A1FB21FA4B40003A58E7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B4770577BCC23F52F19B0E20 /* Pods-whisperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whisperUITests.release.xcconfig"; path = "Target Support Files/Pods-whisperUITests/Pods-whisperUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D4A865527AE0B390CA00851C /* Pods-whisperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whisperTests.debug.xcconfig"; path = "Target Support Files/Pods-whisperTests/Pods-whisperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFC0E61D60B55ECF83E6BCFD /* Pods-whisperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whisperUITests.debug.xcconfig"; path = "Target Support Files/Pods-whisperUITests/Pods-whisperUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				9631317C21F8C6FE006AC57F /* Assets.xcassets */,
 				9631317E21F8C6FE006AC57F /* LaunchScreen.storyboard */,
 				9631318121F8C6FE006AC57F /* Info.plist */,
+				9685A1FB21FA4B40003A58E7 /* Extensions.swift */,
 			);
 			path = whisper;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				963131B221F8EF82006AC57F /* WhisperApi.swift in Sources */,
 				9631317621F8C6FD006AC57F /* AppDelegate.swift in Sources */,
 				963131A921F8EF12006AC57F /* MainInteractor.swift in Sources */,
+				9685A1FC21FA4B40003A58E7 /* Extensions.swift in Sources */,
 				963131A521F8ECD1006AC57F /* MainProtocol.swift in Sources */,
 				963131AD21F8EF31006AC57F /* MainPresenter.swift in Sources */,
 				963131BA21F8F046006AC57F /* Whisper.swift in Sources */,

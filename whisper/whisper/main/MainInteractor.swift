@@ -9,5 +9,18 @@
 import Foundation
 
 class MainInteractor:MainPresenterToInteractorProtocol{
+    var presenter: MainInteractorToPresenterProtocol?
+    
+    let networker = NetworkManager()
+    
+    func fetchPopular() {
+        networker.getPopularWhispers(limit: 50) { result, error in
+            if error != nil{
+                
+            }else{
+                self.presenter?.popularFetched(whispers: result?.popular ?? [])
+            }
+        }
+    }
     
 }

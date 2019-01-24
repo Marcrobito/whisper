@@ -23,6 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="74" y="9"/>
         </scene>
         <!--MainVC-->
         <scene sceneID="MUP-BD-tk1">
@@ -35,6 +36,30 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ojj-5n-gdi">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WhisperCell" rowHeight="215" id="YJZ-dJ-1SY" customClass="WhisperCell" customModule="whisper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="215"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YJZ-dJ-1SY" id="6o0-XO-0qX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="214.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8z5-U5-ca4">
+                                                    <rect key="frame" x="31" y="27" width="313" height="161"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="8z5-U5-ca4" secondAttribute="trailing" constant="16" id="7b6-0c-ye0"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="8z5-U5-ca4" secondAttribute="bottom" constant="16" id="IcR-AV-uen"/>
+                                                <constraint firstItem="8z5-U5-ca4" firstAttribute="leading" secondItem="6o0-XO-0qX" secondAttribute="leadingMargin" constant="16" id="Xeb-MT-LmB"/>
+                                                <constraint firstItem="8z5-U5-ca4" firstAttribute="top" secondItem="6o0-XO-0qX" secondAttribute="topMargin" constant="16" id="vON-SE-dvA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="whisperImage" destination="8z5-U5-ca4" id="KcR-lz-HaS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,6 +71,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JSu-W6-qNC"/>
                     </view>
+                    <connections>
+                        <outlet property="mainTable" destination="Ojj-5n-gdi" id="B0W-6q-a5m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RmL-cz-a16" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
