@@ -8,38 +8,29 @@
 
 import UIKit
 
-class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class MainVC: UIViewController{
     
     var presenter: MainViewToPresenterProtocol?
     
     var whispers:[Whisper] = []
     
+    @IBOutlet weak var collectionView: UICollectionView!
     
     
-    @IBOutlet weak var mainTable: UITableView!
     
     
     override func viewDidLoad() {
-        mainTable.dataSource = self
-        mainTable.delegate = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        self.collectionView.register(UINib(nibName: "WhisperCell", bundle: nil), forCellWithReuseIdentifier: "WhisperCell")
+        
         presenter?.view = self
         presenter?.requestPopular()
         
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 350
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return whispers.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WhisperCell", for: indexPath) as! WhisperCell
-        cell.whisperImage.downloadedFrom(link: whispers[indexPath.row].url)
-        return cell
-    }
+   
     
     
     
@@ -49,12 +40,30 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
 extension MainVC: MainPresenterToViewProtocol{
     func updateView(whispers: [Whisper]) {
         self.whispers = whispers
-        mainTable.reloadData()
+        collectionView.reloadData()
+       
     }
     
 }
 
-class WhisperCell: UITableViewCell{
-    @IBOutlet weak var whisperImage: UIImageView!
+extension MainVC: UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return self.whispers.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WhisperCell", for: indexPath) as! WhisperCell
+        cell.setImage(whispers[indexPath.row].url)
+        
+        return cell
+        
+    }
+    
+    
+}
+
+extension MainVC: UICollectionViewDelegateFlowLayout{
     
 }
